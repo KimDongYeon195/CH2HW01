@@ -11,15 +11,15 @@ void setPotion(int count, int* p_HPPotion, int* p_MPPotion)
 
 int main(void)
 {
-	const int Num = 4;
-	int status[Num] = { 0, };
+	const int Num = 4; //정적변수 Num 선언 및 초기화
+	int status[Num] = { 0, }; // 배열status[Num] 선언(인덱스 0~3) 및 0으로 초기화(인
 	int choice = 0;
 	int HPPotion = 0;
 	int MPPotion = 0;
 
-	while (1)
+	while (1) //무한반복문
 	{
-		cout << "HP와 MP를 입력! : "; // 값 입력 후 enter키 누를 시 개행이 되지 않게 하는법
+		cout << "HP와 MP를 입력! : "; 
 		cin >> status[0] >> status[1];
 
 		if (50 < status[0] && 50 < status[1]) //HP와 MP모두 50보다 크면 
@@ -32,7 +32,7 @@ int main(void)
 
 	}
 
-	while (1)
+	while (1) //무한반복문
 	{
 		cout << "공격력과 방어력 입력! : ";
 		cin >> status[2] >> status[3];
@@ -102,6 +102,7 @@ int main(void)
 
 		case 4:
 			cout << "방어력 2배!" << endl;
+			cout << "현재 방어력 : " << status[3] << endl;
 			status[3] *= 2;
 
 			break;
